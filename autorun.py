@@ -8,17 +8,23 @@ def down_sdx():
     pyautogui.keyDown('alt')
     pyautogui.keyDown('ctrl')
     pyautogui.keyDown('m')
-def up_all():
+def up_sdx():
+    pyautogui.keyUp('alt')
+    pyautogui.keyUp('ctrl')
+    pyautogui.keyUp('m')
+def up_wk():
     pyautogui.keyUp('alt')
     pyautogui.keyUp('ctrl')
     pyautogui.keyUp('p')
-    pyautogui.keyUp('m')
 def run():
     down_wk()
+    time.sleep(0.2)
+    up_wk()
     time.sleep(0.5)
     down_sdx()
+    time.sleep(0.2)
+    up_sdx()
     time.sleep(0.5)
-    up_all()
 while True:
   tNow = time.strftime("%H:%M:%S", time.localtime())
   print("wait")
